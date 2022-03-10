@@ -7,30 +7,65 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/Portfolio.styles.css" asp-append-version="true"/>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                    }
+                });
+                });
+        </script>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<header class="header">
+                  <div class="header_content">
+                   <a href="" class="logo"><img src="image/logo.svg" alt="logo"></a>
+                   <div class="menu">
+                       <a href="#about" class="links">About</a>
+                       <a href="#services"class="links">services</a>
+                       <a href="#exp"class="links">experience</a>
+                       <a href=""class="links">Portfolio</a>
+                       <a href=""class="links">blog</a>
+                       <a href="#contact"class="links">contact</a>
+                   </div>
+                  </div>
+                  <div class="prof_card">
+                      <div class="card_left">
+                          <img src="image/hi.svg" alt="">
+                           <h2 style="color: #C7C7C7; font-weight: 100; font-family: 'PT Sans'; margin-top: 5px;">UX & UI DESIGNER</h2>
+                           <div class="card_info">
+                               <div style="width: 20%;">
+                                   <p class="infofirst">NAME</p>
+                                   <p class="infofirst">D.O.B.</p>
+                                   <p class="infofirst">PHONE</p>
+                                   <p class="infofirst">ADDRESS</p>
+                                   <p class="infofirst">E-MAIL</p>
+                                   <p class="infofirst">WEBSITE</p>
+                               </div>
+                               <div>
+                                   <p class="infolast"> Otem</p>
+                                   <p class="infolast"> 13.08.2002</p>
+                                   <p class="infolast"> +7-996-666-66-66</p>
+                                   <p class="infolast"> Kazan</p>
+                                   <p class="infolast"> scumwd@gmail.com</p>
+                                   <p class="infolast"><a class="infolast" href="https://github.com/scumwd">github.com/scumwd</a></p>
+                               </div>
+                           </div>
+                      </div>
+                      <div class="card_right">
+                           <img width="379px" style="margin-top: 19px;" src="image/photo.jpg" alt="">
+                      </div>
+                  </div>
 </header>
-<div class="container">
+<div class="">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>

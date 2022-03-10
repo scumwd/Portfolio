@@ -1,18 +1,156 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
 html {
   position: relative;
   min-height: 100%;
 }
+*{
+  margin: 0;
+  padding: 0;
+}
+p{
+  font-family: PT Sans;
+}
+a{
+  color: white;
+}
+.header{
+  background-image: url("image/header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+}
+.header_content{
+  display: flex;
+  justify-content: space-between;
+  width: 1450px;
+  height: 100px;
+  margin: 0 auto;
+}
+.logo{
+  margin-top: 25px;
+}
+.menu{
+  margin-top: 40px;
+  font-size: 1.4em;
+  padding: 10px 0;
+  text-transform: uppercase;
+}
+.links{
+  font-family: 'PT Sans';
+  margin-right: 14px;
+  text-decoration: none;
+  color: white;
+}
+.links:hover{
+  border-bottom: 3px solid #8F0078;
+  color: #8F0078;
+  content: attr(data-hover);
+}
+.prof_card{
+  display: flex;
+  margin: 30px auto;
+  width: 1140px;
+  height: 495px;
+  background: rgba(23, 20, 20, 0.58);
+}
+.card_left{
+  width: 569px;
+  height: 358px;
+  padding: 48px;
+}
+.card_info{
+  display: flex;
+  margin-top: 1.5em;
+  border-top: 1px solid #AFAFAF;
+  padding-top: 0.5em;
+}
+.infofirst{
+  font-weight: 800;
+  color: white;
+  margin-top: 1em;
+  font-family: 'PT Sans';
+  font-size: 18px;
+}
+.infolast{
+  color: white;
+  margin-top: 1em;
+  font-family: 'PT Sans';
+  font-size: 18px;
+}
+.card_right{
+  padding: 48px;
+  vertical-align: middle;
+}
+.about{
+  width: 100%;
+  display: flex;
+  min-height: 580px;
+}
+.about-left{
+  background-image: url('image/about.jpg');
+  height: 620px;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.about-right{
+  width: 50%;
+  background: #f4f4f4;
 
-body {
-  margin-bottom: 60px;
+}
+.about_links{
+  font-family: PT Sans;
+  padding: 0.6em 2em;
+  font-size: 1.3em;
+  color: #8F0078;
+  border: 2px solid #8F0078;
+  text-decoration: none;
+  border-radius: 1.5em;
+}
+.about_links:hover{
+  background: #8F0078;
+  color: #fff;
+}
+.services{
+  background-color: #1b242f;
+}
+.services_content{
+  padding: 100px 0;
+  margin: 0 auto;
+  width: 1170px;
+  text-align: center;
+}
+.services-title{
+  margin-bottom: 20px;
+}
+.servic{
+  display: flex;
+  margin-top: 50px;
+}
+.servic_info{
+  text-align: left;
+  font-size: 18px;
+  color: #fff;
+}
+.sf{
+  display: flex;
+}
+.sf1{
+  margin-right:100px;
+  width: 50%;
+}
+.sf2{
+  width: 50%;
+}
+.exp{
+  margin-left: 300px;
+  padding: 150px 0;
+  text-align: center;
+}
+.email{
+  display: flex;
+  flex-direction: row;
+  height: 300px;
 }
